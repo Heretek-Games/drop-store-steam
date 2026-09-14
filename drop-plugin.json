@@ -1,0 +1,18 @@
+{
+  "id": "drop-store-steam",
+  "name": "Steam",
+  "version": "0.1.0",
+  "description": "Steam local library scanner and store aggregator client plugin for Drop (#21).",
+  "author": "Heretek Games",
+  "apiVersion": 2,
+  "trust": "trusted",
+  "storageVersion": 1,
+  "capabilities": [
+    "client:library-scan",
+    "client:storage"
+  ],
+  "targets": [
+    "client"
+  ],
+  "entry": "dist/src/index.js"
+}
