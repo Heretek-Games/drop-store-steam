@@ -4,12 +4,17 @@ Steam local library scanner and store aggregator client plugin for Drop (#21).
 
 ## Toolchain
 
-- Node >= 22, pnpm 10+
-- `pnpm install`, `pnpm build`, `pnpm test`
+- Node >= 22, npm 10+
+- `npm ci`, `npm run build`, `npm test`, `npm run typecheck`
 
 ## Contract
 
-Built on [`@droposs/plugin-sdk`](https://github.com/Heretek-Games/drop-plugin-sdk)
-(plugin API v2). The local dependency resolves the sibling checkout at
-`../drop-plugin-sdk/packages/plugin-sdk` so the workspace builds before the
-SDK is republished to npm.
+Built on [`@droposs/plugin-sdk`](https://www.npmjs.com/package/@droposs/plugin-sdk)
+(plugin API v2, `^0.4.0` from the npm registry).
+
+## Boundaries
+
+- Pure parsing only: VDF/ACF text in, `StoreCandidate[]` out.
+- The plugin never touches the filesystem, never probes the OS, and returns
+  `[]` when the host has not supplied a library snapshot.
+- Host-side file access (`game:scan`) is documented in `README.md`.
