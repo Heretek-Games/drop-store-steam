@@ -8,15 +8,19 @@
     "build": "rm -rf dist && tsc",
     "test": "node --test dist/test/*.js",
     "typecheck": "tsc --noEmit",
-    "sign": "drop-plugin sign ."
+    "sign": "drop-plugin sign .",
+    "lint": "eslint ."
   },
   "dependencies": {
     "@droposs/plugin-sdk": "^0.4.0"
   },
   "devDependencies": {
     "@droposs/plugin-cli": "^0.4.0",
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^22.0.0",
+    "eslint": "^10.10.0",
     "typescript": "^5.7.0",
-    "@types/node": "^22.0.0"
+    "typescript-eslint": "^8.70.0"
   },
   "license": "MIT"
 }
