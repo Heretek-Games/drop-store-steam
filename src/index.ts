@@ -320,6 +320,7 @@ export async function detectFromStorage(
 
 export default class SteamPlugin implements ClientPlugin {
   metadata = {
+    apiVersion: 2,
     id: "drop-store-steam",
     name: "Steam",
     version: "0.1.0",
